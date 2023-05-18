@@ -1,0 +1,221 @@
+body {
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: white;
+  color: black;
+  font-family: 'Syne Mono', monospace;
+  overflow: hidden;
+}
+
+.container strong{
+  font-size: 100px;
+  padding-bottom: 20px;
+}
+
+.content {
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+  margin: 20px;
+  background: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: -10px 10px 60px -10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: apparition 0.6s 1s forwards;
+}
+.content p {
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: black;
+}
+.content p:last-child {
+  margin-bottom: 0;
+}
+.content button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  background: transparent;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.content button:hover{
+  color: white;
+  background: black;
+}
+
+.particle {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+
+
+
+.particle:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  font-size: 22px;
+  filter: blur(0.02px);
+  animation: 34s float2 infinite;
+}
+.particle:nth-child(2) {
+  top: 15%;
+  left: 20%;
+  font-size: 26px;
+  filter: blur(0.04px);
+  animation: 34s floatReverse2 infinite;
+}
+.particle:nth-child(3) {
+  top: 2%;
+  left: 40%;
+  font-size: 12px;
+  filter: blur(0.06px);
+  animation: 38s float2 infinite;
+}
+.particle:nth-child(4) {
+  top: 20%;
+  left: 70%;
+  font-size: 17px;
+  filter: blur(0.08px);
+  animation: 21s floatReverse2 infinite;
+}
+.particle:nth-child(5) {
+  top: 15%;
+  left: 90%;
+  font-size: 25px;
+  filter: blur(0.1px);
+  animation: 34s floatReverse infinite;
+}
+.particle:nth-child(6) {
+  top: 25%;
+  left: 10%;
+  font-size: 19px;
+  filter: blur(0.12px);
+  animation: 25s float2 infinite;
+}
+.particle:nth-child(7) {
+  top: 45%;
+  left: 30%;
+  font-size: 28px;
+  filter: blur(0.14px);
+  animation: 26s floatReverse2 infinite;
+}
+.particle:nth-child(8) {
+  top: 40%;
+  left: 50%;
+  font-size: 29px;
+  filter: blur(0.16px);
+  animation: 33s floatReverse infinite;
+}
+.particle:nth-child(9) {
+  top: 45%;
+  left: 65%;
+  font-size: 20px;
+  filter: blur(0.18px);
+  animation: 32s floatReverse2 infinite;
+}
+.particle:nth-child(10) {
+  top: 25%;
+  left: 80%;
+  font-size: 13px;
+  filter: blur(0.2px);
+  animation: 33s float infinite;
+}
+.particle:nth-child(11) {
+  top: 85%;
+  left: 5%;
+  font-size: 21px;
+  filter: blur(0.22px);
+  animation: 34s floatReverse2 infinite;
+}
+.particle:nth-child(12) {
+  top: 80%;
+  left: 25%;
+  font-size: 14px;
+  filter: blur(0.24px);
+  animation: 31s float2 infinite;
+}
+.particle:nth-child(13) {
+  top: 85%;
+  left: 50%;
+  font-size: 14px;
+  filter: blur(0.26px);
+  animation: 37s float2 infinite;
+}
+.particle:nth-child(14) {
+  top: 75%;
+  left: 70%;
+  font-size: 21px;
+  filter: blur(0.28px);
+  animation: 40s float infinite;
+}
+.particle:nth-child(15) {
+  top: 80%;
+  left: 90%;
+  font-size: 20px;
+  filter: blur(0.3px);
+  animation: 22s float2 infinite;
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(120px);
+  }
+}
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-120px);
+  }
+}
+@keyframes float2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+@keyframes floatReverse2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
